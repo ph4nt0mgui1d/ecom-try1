@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ecom_try1.Models;
 
 namespace ecom_try1.Controllers;
-
+[Area("Admin")]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
