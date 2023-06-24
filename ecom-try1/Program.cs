@@ -9,7 +9,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
+    //options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
+    options.UseMySQL(builder.Configuration.GetConnectionString("Default"));
 });
 
 builder.Services.AddDefaultIdentity<IdentityUser>().AddDefaultTokenProviders()

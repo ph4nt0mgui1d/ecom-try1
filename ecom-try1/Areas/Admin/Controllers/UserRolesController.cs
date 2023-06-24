@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ecom_try1.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class UserRolesController : Controller
     {
 
