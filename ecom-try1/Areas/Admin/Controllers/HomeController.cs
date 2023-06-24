@@ -1,15 +1,17 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ecom_try1.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ecom_try1.Controllers;
 [Area("Admin")]
+[Authorize(Roles = "Admin, Manager")]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
-    {
+    { 
         _logger = logger;
     }
 

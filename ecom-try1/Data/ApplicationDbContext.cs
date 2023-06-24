@@ -11,6 +11,5 @@ public class ApplicationDbContext : IdentityDbContext
     {
     }
     public virtual DbSet<Product> Products { get; set; }
-
+    public virtual DbSet<ApplicationUser> ApplicationUser { get; set; }
 }
-
